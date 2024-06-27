@@ -12,7 +12,7 @@ export const OrdersListPage = () => {
             <Text>Orders</Text>
             {isLoading && <p className="text-orange-400">Loading...</p>}
             {isError && <p className="text-red-600">{error}</p>}
-            {data && <OrdersList orders={data.records}/>}
+            {data && <OrdersList data={data.records}/>}
         </>
     );
 };

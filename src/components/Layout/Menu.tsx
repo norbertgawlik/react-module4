@@ -20,12 +20,14 @@ const WaNavLink = ({to,children} : Props) => {
 export const Menu = () => {
     return(
         <>
-            <nav className="mb-3"><ul className="flex">
+            <nav className="mb-3 w-full">
+                <ul className="flex justify-center">
                     <WaNavLink to="/">Home</WaNavLink>
                     <WaNavLink to="/products">Products</WaNavLink>
                     <WaNavLink to="/categories">Categories</WaNavLink>
                     <WaNavLink to="/orders">Orders</WaNavLink>
-            </ul></nav>
+                </ul>
+            </nav>
         </>
     );
 };

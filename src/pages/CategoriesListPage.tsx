@@ -12,7 +12,7 @@ export const CategoriesListPage = () => {
             <Text>Categories List</Text>
             {isLoading && <p className="text-orange-400">Loading...</p>}
             {isError && <p className="text-red-600">{error}</p>}
-            {data && <CategoriesList categories={data.records}/>}
+            {data && <CategoriesList data={data.records}/>}
         </>
     );
 };

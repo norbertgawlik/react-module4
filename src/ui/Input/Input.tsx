@@ -12,17 +12,18 @@ export const Input = forwardRef(
     const id = useId();
 
     return(
-        <div className="my-2">
-        <label htmlFor={id} className="mr-2 dark:text-slate-300">{label}</label>
-        <input 
-            id={id} 
-            ref={ref}
-            {...rest}
-            className={cn(
-                {'text-red-300 border-2 border-red-300 ring-red-300 placeholder:text-red-300 focus:ring-500' : error}
-            )}
-            />
-            {error && <p className="text-red-500">{error.message}</p>}
+        <div className="my-2 flex flex-col max-w-52">
+            <label htmlFor={id} className="my-1 text-sm mr-2 uppercase text-left text-gray-400 dark:text-gray-400">{label}</label>
+            <input 
+                id={id} 
+                ref={ref}
+                {...rest}
+                className={cn(
+                    'h-10 rounded px-3 outline-none',
+                    {'text-red-300 border-2 border-red-300 ring-red-300 placeholder:text-red-300 focus:ring-500' : error}
+                )}
+                />
+            {error && <p className="text-red-500 text-xs mt-1">{error.message}</p>}
         </div>
     );
 });

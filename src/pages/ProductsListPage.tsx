@@ -11,7 +11,7 @@ export const ProductsListPage = () => {
             <Text>Products</Text>
             {isLoading && <p className="text-orange-400">Loading...</p>}
             {isError && <p className="text-red-600">{error}</p>}
-            {data && <ProductsList products={data.records}/>}
+            {data && <ProductsList data={data.records}/>}
         </>
     );
 };

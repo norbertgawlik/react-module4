@@ -1,3 +1,5 @@
+import { z } from "zod";
+
 export type Order = {
     id: string,
     fields: {
@@ -10,3 +12,12 @@ export type Order = {
         updated_at : Date
     };
 };
+
+export const OrderFormSchema = z.object({
+    product_id : z.number().min(1,"filed is required"),
+    quantity : z.number().min(1,"field is required"),
+    price : z.number().min(1,"field is required"),
+    customer_name : z.string().min(1,"field is required")
+});
+
+export type OrderFormSchemaInfer = z.infer<typeof OrderFormSchema>;

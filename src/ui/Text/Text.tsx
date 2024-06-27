@@ -8,7 +8,7 @@ type Props = {
 
 const Text = ({children = "none txt",className}: Props) => {
     return <p className={cn(
-        "dark:text-slate-300",
+        "dark:text-slate-300 m-3 text-xl",
         className
     )}>{children}</p>
 };

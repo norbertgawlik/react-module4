@@ -7,7 +7,7 @@ export type AirtableListResponse<T> = {
 };
 
 const fetchData = <T>(endpoint : string) : Promise<AirtableListResponse<T>> => {
-    return fetch(`https://api.airtable.com/v0/${import.meta.env.VITE_ARITABLE_BASE_ID}/${endpoint}`,{
+    return fetch(`https://api.airtable.com/v0/${import.meta.env.VITE_AIRTABLE_BASE_ID}/${endpoint}`,{
         headers : {
             'Authorization' : `Bearer ${import.meta.env.VITE_AIRTABLE_API_TOKEN}`,
             'Content-type' : 'application/json'
@@ -20,7 +20,7 @@ const fetchData = <T>(endpoint : string) : Promise<AirtableListResponse<T>> => {
 };
 
 export const fetchProducts = () : Promise<AirtableListResponse<Product[]>> => {
-    return fetchData('productss');
+    return fetchData('products');
 };
 
 export const fetchCategories = () : Promise<AirtableListResponse<Category[]>> => {

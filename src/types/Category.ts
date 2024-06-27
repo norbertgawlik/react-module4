@@ -1,3 +1,5 @@
+import { z } from "zod";
+
 export type Category = {
     id: string,
     fields: {
@@ -8,3 +10,10 @@ export type Category = {
         updated_at : Date
     };
 };
+
+export const CategoryFormSchema = z.object({
+    name : z.string().min(1,"filed is required"),
+    description : z.string().min(1,"field is required")
+});
+
+export type CategoryFormSchemaInfer = z.infer<typeof CategoryFormSchema>;

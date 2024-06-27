@@ -10,7 +10,7 @@ export const Button = ({label, className, ...rep} : Props) => {
     return(
         <button
             className={cn(
-                "mt-2 mb-2 py-1.5 px-5 pytext-sm border transition ease-in hover:outline-none hover:opacity-85",
+                "bg-blue-500 mt-2 mb-2 py-1.5 px-5 pytext-sm border transition ease-in hover:outline-none hover:opacity-85",
                 className
             )}
             {...rep}>
